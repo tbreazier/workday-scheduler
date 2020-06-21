@@ -4,4 +4,4 @@
 
 [link to github repo](https://github.com/tbreazier/workday-scheduler)
 
-![demo of site](./assets/workday-scheduler-demo.gif)
+![demo of site](https://github.com/tbreazier/workday-scheduler/blob/master/Assets/workday-scheduler-demo.gif)
