@@ -1,5 +1,5 @@
 var currentTime = moment().format("HH");
-var currentTimeInt = parseInt(currentTime);
+var currentTimeEl = parseInt(currentTime);
 var saveBtn = $(".saveBtn");
 
 $("#row9").attr("data-time", moment("0900", "HH:mm").format("HH"));
@@ -16,22 +16,24 @@ $(document).ready(function () {
 
     loadSchedule();
 
-    var currentDay = moment().format("dddd, MMMM Do");
+	var currentDay = moment().format("dddd, MMMM Do");
+	var time = moment().format("HH:mm")
 	$("#currentDay").text(currentDay);
+	$("#militaryTime").text(time);
 
 	for (var x = 9; x <= 17; x++){
         var inputTime = $("#" + "row" + x).attr("data-time");
-        var inputTimeInt = parseInt(inputTime);
+        var inputTimeEl = parseInt(inputTime);
 
-        if (currentTimeInt === inputTimeInt){
+        if (currentTimeEl === inputTimeEl){
             $("#" + "row" + x).addClass("present");  
         }
 
-        if (currentTimeInt > inputTimeInt){
+        if (currentTimeEl > inputTimeEl){
             $("#" + "row" + x).addClass("past");
         }
 
-        if (currentTimeInt < inputTimeInt){
+        if (currentTimeEl < inputTimeEl){
             $("#" + "row" + x).addClass("future");
         }
     }
