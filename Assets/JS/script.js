@@ -12,41 +12,38 @@ $("#row15").attr("data-time", moment("1500", "HH:mm").format("HH"));
 $("#row16").attr("data-time", moment("1600", "HH:mm").format("HH"));
 $("#row17").attr("data-time", moment("1700", "HH:mm").format("HH"));
 
-$(document).ready(function () {
+var currentDay = moment().format("dddd, MMMM Do");
+var time = moment().format("HH:mm")
+$("#currentDay").text(currentDay);
+$("#militaryTime").text(time);
 
-    loadSchedule();
+for (var x = 9; x <= 17; x++){
+    var inputTime = $("#" + "row" + x).attr("data-time");
+    var inputTimeEl = parseInt(inputTime);
 
-	var currentDay = moment().format("dddd, MMMM Do");
-	var time = moment().format("HH:mm")
-	$("#currentDay").text(currentDay);
-	$("#militaryTime").text(time);
-
-	for (var x = 9; x <= 17; x++){
-        var inputTime = $("#" + "row" + x).attr("data-time");
-        var inputTimeEl = parseInt(inputTime);
-
-        if (currentTimeEl === inputTimeEl){
-            $("#" + "row" + x).addClass("present");  
-        }
-
-        if (currentTimeEl > inputTimeEl){
-            $("#" + "row" + x).addClass("past");
-        }
-
-        if (currentTimeEl < inputTimeEl){
-            $("#" + "row" + x).addClass("future");
-        }
+    if (currentTimeEl === inputTimeEl){
+        $("#" + "row" + x).addClass("present");  
     }
 
-    saveBtn.on("click", function () {
-        var hour = $(this).attr("data-hour");
-        var schedule = $("#" + "row" + hour).val();
-        localStorage.setItem(hour, schedule);
-    });
-
-    function loadSchedule() {
-        for (var i = 9; i <= 17; i++) {
-            $("#" + "row" + i).val(localStorage.getItem(i));
-        }
+    if (currentTimeEl > inputTimeEl){
+        $("#" + "row" + x).addClass("past");
     }
+
+    if (currentTimeEl < inputTimeEl){
+        $("#" + "row" + x).addClass("future");
+    }
+}
+
+saveBtn.on("click", function () {
+    var hour = $(this).attr("data-hour");
+    var schedule = $("#" + "row" + hour).val();
+    localStorage.setItem(hour, schedule);
 });
+
+function loadSchedule() {
+    for (var i = 9; i <= 17; i++) {
+        $("#" + "row" + i).val(localStorage.getItem(i));
+    }
+}
+
+loadSchedule();

@@ -11,15 +11,11 @@
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"crossorigin="anonymous"/>
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
-    <link rel="stylesheet" href="./Assets/CSS/style.css" />
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"/>
+    <link rel="stylesheet" href="./Assets/CSS/style.css"/>
     <title>Work Day Scheduler</title>
   </head>
 
@@ -32,54 +28,55 @@
     </header>
     <div class="container">
       <div class="row">
-        <div class="col-md-1 col-sm-2 hour p-4">9AM</div>
-        <input id="row9" class="col-md-10 col-sm-8">
-        <button class="col-md-1 col-sm-2 saveBtn" data-hour=9><span class="oi oi-calendar"></span>
+        <div class="col-md-1 col-sm-2 col-xs-3 hour">9AM</div>
+        <input id="row9" class="col-md-10 col-sm-8 col-xs-6 description">
+        <button class="col-md-1 col-sm-2 col-xs-3 saveBtn" data-hour=9><span class="oi oi-calendar"></span>
       </div>
       <div class="row">
-        <div class="col-md-1 col-sm-2 hour p-4">10AM</div>
-        <input id="row10" class="col-md-10 col-sm-8">
+        <div class="col-md-1 col-sm-2 hour">10AM</div>
+        <input id="row10" class="col-md-10 col-sm-8 description">
         <button class="col-md-1 col-sm-2 saveBtn" data-hour=10><span class="oi oi-calendar"></span>
       </div>
       <div class="row">
-        <div class="col-md-1 col-sm-2 hour p-4">11AM</div>
-        <input id="row11" class="col-md-10 col-sm-8">
+        <div class="col-md-1 col-sm-2 hour">11AM</div>
+        <input id="row11" class="col-md-10 col-sm-8 description">
         <button class="col-md-1 col-sm-2 saveBtn" data-hour=11><span class="oi oi-calendar"></span>
       </div>
       <div class="row">
-        <div class="col-md-1 col-sm-2 hour p-4">12PM</div>
-        <input id="row12" class="col-md-10 col-sm-8">
+        <div class="col-md-1 col-sm-2 hour">12PM</div>
+        <input id="row12" class="col-md-10 col-sm-8 description">
         <button class="col-md-1 col-sm-2 saveBtn" data-hour=12><span class="oi oi-calendar"></span>
       </div>
       <div class="row">
-        <div class="col-md-1 col-sm-2 hour p-4">1PM</div>
-        <input id="row13" class="col-md-10 col-sm-8">
+        <div class="col-md-1 col-sm-2 hour">1PM</div>
+        <input id="row13" class="col-md-10 col-sm-8 description">
         <button class="col-md-1 col-sm-2 saveBtn" data-hour=13><span class="oi oi-calendar"></span>
       </div>
       <div class="row">
-        <div class="col-md-1 col-sm-2 hour p-4">2PM</div>
-        <input id="row14" class="col-md-10 col-sm-8">
+        <div class="col-md-1 col-sm-2 hour">2PM</div>
+        <input id="row14" class="col-md-10 col-sm-8 description">
         <button class="col-md-1 col-sm-2 saveBtn" data-hour=14><span class="oi oi-calendar"></span>
       </div>
       <div class="row">
-        <div class="col-md-1 col-sm-2 hour p-4">3PM</div>
-        <input id="row15" class="col-md-10 col-sm-8">
+        <div class="col-md-1 col-sm-2 hour">3PM</div>
+        <input id="row15" class="col-md-10 col-sm-8 description">
         <button class="col-md-1 col-sm-2 saveBtn" data-hour=15><span class="oi oi-calendar"></span>
       </div>
       <div class="row">
-        <div class="col-md-1 col-sm-2 hour p-4">4PM</div>
-        <input id="row16" class="col-md-10 col-sm-8">
+        <div class="col-md-1 col-sm-2 hour">4PM</div>
+        <input id="row16" class="col-md-10 col-sm-8 description">
         <button class="col-md-1 col-sm-2 saveBtn" data-hour=16><span class="oi oi-calendar"></span>
       </div>
       <div class="row">
-        <div class="col-md-1 col-sm-2 hour p-4">5PM</div>
-        <input id="row17" class="col-md-10 col-sm-8">
+        <div class="col-md-1 col-sm-2 hour">5PM</div>
+        <input id="row17" class="col-md-10 col-sm-8 description">
         <button class="col-md-1 col-sm-2 saveBtn" data-hour=17><span class="oi oi-calendar"></span>
       </div>
       </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./Assets/JS/script.js"></script>
   </body>
