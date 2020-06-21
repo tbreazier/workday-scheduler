@@ -45,8 +45,8 @@ $(document).ready(function () {
     });
 
     function loadSchedule() {
-        for (var i = 1; i <= 17; i++) {
-            $("#" + "row + i").val(localStorage.getItem(i));
+        for (var i = 9; i <= 17; i++) {
+            $("#" + "row" + i).val(localStorage.getItem(i));
         }
     }
 });
